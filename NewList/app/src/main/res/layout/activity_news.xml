@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsActivity">
+
+    <Button
+        android:id="@+id/buttond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+    </Button>
+
+    <Button
+        android:id="@+id/buttonout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Log Out"
+        app:layout_constraintTop_toBottomOf="@+id/buttond"
+        app:layout_constraintStart_toStartOf="@+id/buttond"
+        tools:ignore="MissingConstraints">
+    </Button>
+
+    <Button
+        android:id="@+id/buttonurl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "About"
+        app:layout_constraintTop_toBottomOf="@+id/buttonout"
+        app:layout_constraintStart_toStartOf="@+id/buttonout"
+        tools:ignore="MissingConstraints">
+    </Button>
+
+    <TextView
+        android:id="@+id/texteview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@+id/buttonurl"
+        app:layout_constraintStart_toStartOf="@+id/buttonurl"></TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
