@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="DatePicker"
+        android:id="@+id/edittext1"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="TimePicker"
+        android:id="@+id/edittext2"
+        android:layout_below="@+id/edittext1" />
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Température(°C)"
+        android:id="@+id/edittext3"
+        android:layout_below="@+id/edittext2" />
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Vitesse du Vent(km/h)"
+        android:id="@+id/edittext4"
+        android:layout_below="@+id/edittext3" />
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Etat du ciel"
+        android:id="@+id/edittext5"
+        android:layout_below="@+id/edittext4" />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valider"
+        android:layout_below="@+id/edittext5"
+        />
+</RelativeLayout>
