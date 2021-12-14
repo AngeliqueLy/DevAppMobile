@@ -17,13 +17,9 @@ import java.util.List;
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
 
     private final List<Movie> mmovie;
-
-
     public Adapter( List<Movie> movie) {
-
         mmovie = movie;
     }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -33,25 +29,19 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
 
         return new ViewHolder(contactView);
     }
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Movie movie = mmovie.get(position);
-
         ImageView image = holder.Filmaff;
-        Glide.with(image.getContext()).load(movie.getPoster_path()).into(image);
+        String load = "https://image.tmdb.org/t/p/w500" + movie.getPoster_path();
+        Glide.with(image.getContext()).load(load).into(image);
     }
-
     @Override
     public int getItemCount() {
         return mmovie.size();
     }
-
     public static class ViewHolder extends RecyclerView.ViewHolder {
-
         public ImageView Filmaff;
-
-
         public ViewHolder(View itemView) {
             super(itemView);
             Filmaff = (ImageView) itemView.findViewById((R.id.image));

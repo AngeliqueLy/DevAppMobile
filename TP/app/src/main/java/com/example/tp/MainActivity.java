@@ -1,6 +1,7 @@
 package com.example.tp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         Adapter adapter = new Adapter(movie);
         rvContacts.setAdapter(adapter);
-        rvContacts.setLayoutManager(new LinearLayoutManager(this));
+        rvContacts.setLayoutManager(new GridLayoutManager(this,2));
 
         Toast.makeText(this,"nombre de film : "+movie.size(), Toast.LENGTH_SHORT).show();
 
