@@ -1,6 +1,8 @@
 package com.example.tp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -40,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void afficherMovie(List<Movie> movie) {
+        RecyclerView rvContacts = (RecyclerView) findViewById(R.id.listfilm);
+
+        Adapter adapter = new Adapter(movie);
+        rvContacts.setAdapter(adapter);
+        rvContacts.setLayoutManager(new LinearLayoutManager(this));
 
         Toast.makeText(this,"nombre de film : "+movie.size(), Toast.LENGTH_SHORT).show();
 
