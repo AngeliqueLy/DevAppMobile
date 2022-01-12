@@ -4,14 +4,19 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Movie {
+public class Movie implements Serializable{
 
+    private String id;
     private String title;
     private ArrayList<Integer> genre_ids;
     private String release_date;
     private String overview;
     private String poster_path;
 
+
+    public String getId() {return id;};
+
+    public String setId(String id) {return this.id = id;}
 
     public String getTitle() {
         return title;

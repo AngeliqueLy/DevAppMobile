@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/upcoming"
+        android:icon="@drawable/ic_baseline_new_releases_24"
+        android:title="Upcoming" />
+
+    <item
+        android:id="@+id/popular"
+        android:icon="@drawable/ic_baseline_movie_filter_24"
+        android:title="Popular" />
+
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="Favorite" />
+
+    <item
+        android:id="@+id/research"
+        android:title="Research"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.widget.SearchView"/>
+
+
+</menu>

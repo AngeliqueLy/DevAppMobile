@@ -10,4 +10,25 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/fave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="favorite"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toStartOf="@+id/detail"
+        tools:ignore="MissingConstraints"
+       ></Button>
+
+    <Button
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintStart_toEndOf="@+id/fave"
+        tools:ignore="MissingConstraints"></Button>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
