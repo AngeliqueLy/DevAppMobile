@@ -4,18 +4,24 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/titlefilm"
+       tools:ignore="MissingConstraints"></TextView>
     <ImageView
         android:id="@+id/image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
+        app:layout_constraintTop_toBottomOf="@+id/titlefilm"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/fave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="favorite"
+        android:text="@string/favorite"
         app:layout_constraintTop_toBottomOf="@+id/image"
         app:layout_constraintEnd_toStartOf="@+id/detail"
         tools:ignore="MissingConstraints"
@@ -25,7 +31,7 @@
         android:id="@+id/detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Detail"
+        android:text="@string/detail"
         app:layout_constraintTop_toBottomOf="@+id/image"
         app:layout_constraintStart_toEndOf="@+id/fave"
         tools:ignore="MissingConstraints"></Button>

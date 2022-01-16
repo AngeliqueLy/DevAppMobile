@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>   <string name="app_name">TP</string>
+    <string name="title_activity_popular_movie">热门电影</string>
+    <string name="title_activity_details_movie">电影详情</string>
+    <string name="title_activity_upcoming_movie">即将上映的电影</string>
+    <string name="large_text">
+
+    </string>
+    <string name="genre">类型 :</string>
+    <string name="overviewl">概述 : </string>
+    <string name="favorite">喜欢</string>
+    <string name="detail">细节</string>
+    <string name="releasedatel">发布日期 :</string>
+    <string name="titlel">标题 :</string>
+    <string name="quitter">离开</string>
+    <string name="ok">好</string>
+    <string name="upcoming">未来</string>
+    <string name="popular">热门</string>
+    <string name="favoris">最喜爱</string>
+    <string name="research">查</string>
+    <string name="language">语言</string></resources>

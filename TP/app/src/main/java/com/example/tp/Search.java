@@ -4,15 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.widget.ArrayAdapter;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,49 +22,34 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Search extends AppCompatActivity {
-    ArrayAdapter<String> arrayadapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+        setTitle(getResources().getString(R.string.research));
+
+        //Bouton pour valider la recherche
+        Button ok = findViewById(R.id.ok);
+        //Saisi de l'utilisateur
+        EditText film = findViewById(R.id.search);
+
+        //Appel API pour la recherche des film
         MoviesService moviesService = new Retrofit.Builder()
                 .baseUrl(MoviesService.ENDPOINT)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(MoviesService.class);
-
-        moviesService.getPopularMovies().enqueue(new Callback<MovieResponse>() {
+        ListApp app = (ListApp) getApplicationContext();
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+        moviesService.ResearchMovies(film.getText().toString() ,app.getLangueselectionner()).enqueue(new Callback<MovieResponse>() {
             @Override
             public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
-                ArrayList<Movie> movie;
-                movie=(ArrayList<Movie>) response.body().getitem();
-                RecyclerView rvfilm = (RecyclerView) findViewById(R.id.listfilm1);
-                Button detail = (Button) findViewById(R.id.detail);
-                Adapter adapter = new Adapter(movie);
-                EditText search = findViewById(R.id.search);
+                afficherMovie(response.body().getitem());
 
-                search.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                        // TODO Auto-generated method stub
-                    }
-
-                    @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                        // TODO Auto-generated method stub
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable s) {
-
-                        // filter your list from your input
-                        adapter.filter(s.toString());
-                        //you can use runnable postDelayed like 500 ms to delay search text
-                    }
-                });
             }
 
             @Override
@@ -73,8 +59,55 @@ public class Search extends AppCompatActivity {
             }
 
         });
+            }
+        });
     }
 
+    //Création du menu pour passer d'une page à une autre
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.bottom_nav_menu, menu);
+
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intentupc = new Intent(Search.this, UpcomingMovie.class);
+        Intent intentpop = new Intent(Search.this, PopularMovie.class);
+        Intent intentlangue = new Intent(Search.this, Langue.class);
+        switch (item.getItemId()) {
+
+            case R.id.popular:
+                startActivity(intentpop);
+                finish();
+                return true;
+            case R.id.favorite:
+                return true;
+            case R.id.upcoming:
+                startActivity(intentupc);
+                finish();
+                return true;
+            case R.id.research:
+
+                return true;
+            case R.id.langue:
+                startActivity(intentlangue);
+                finish();
+                return true;
+        }
+        return false;
+    }
+
+//Fonction qui affiche le poster des film et son titre quand l'utilisateur entre le nom d'un film
+    public void afficherMovie(List<Movie> movie) {
+        RecyclerView rvfilm = (RecyclerView) findViewById(R.id.listfilm3);
+        Adapter adapter = new Adapter(movie);
+        rvfilm.setAdapter(adapter);
+        rvfilm.setLayoutManager(new GridLayoutManager(this, 2));
 
 
     }
+
+}
+
+
+

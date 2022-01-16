@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> <string name="app_name">TP</string>
+    <string name="title_activity_popular_movie">Film Populaire</string>
+    <string name="title_activity_details_movie">Film Détail</string>
+    <string name="title_activity_upcoming_movie">Film à venir</string>
+    <string name="large_text">
+
+    </string>
+
+    <string name="genre">Genre :</string>
+    <string name="overviewl">Synopsis : </string>
+    <string name="favorite">Aime</string>
+    <string name="detail">Détail</string>
+    <string name="releasedatel">Date de sortie :</string>
+    <string name="titlel">Titre :</string>
+    <string name="quitter">Quitter</string>
+    <string name="ok">OK</string>
+    <string name="upcoming">A venir</string>
+    <string name="popular">Populaire</string>
+    <string name="favoris">Favoris</string>
+    <string name="research">Recherche</string>
+    <string name="language">Langage</string></resources>

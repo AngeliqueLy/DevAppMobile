@@ -12,6 +12,7 @@ public class Movie implements Serializable{
     private String release_date;
     private String overview;
     private String poster_path;
+    private Genre[] genres;
 
 
     public String getId() {return id;};
@@ -56,5 +57,13 @@ public class Movie implements Serializable{
 
     public void setPoster_path(String poster_path) {
         this.poster_path = poster_path;
+    }
+
+    public Genre[] getGenre() {
+        return genres;
+    }
+
+    public void setGenre(Genre[] genre) {
+        this.genres = genre;
     }
 }

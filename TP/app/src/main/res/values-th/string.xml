@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TP</string>
+    <string name="title_activity_popular_movie">Popular Movie</string>
+    <string name="title_activity_details_movie">Movie Detail</string>
+    <string name="title_activity_upcoming_movie">Upcoming Movie</string>
+    <string name="large_text">
+
+    </string>
+
+    <string name="genre">ใจดี :</string>
+    <string name="overviewl">นามธรรม : </string>
+    <string name="favorite">ฉันชอบ</string>
+    <string name="detail">รายละเอียด</string>
+    <string name="releasedatel">วันที่วางจำหน่าย :</string>
+    <string name="titlel">ชื่อ :</string>
+    <string name="quitter">ออกจาก</string>
+    <string name="ok">ตกลง</string>
+    <string name="upcoming">อนาคต</string>
+    <string name="popular">เป็นที่นิยม</string>
+    <string name="favoris">รายการโปรด</string>
+    <string name="research">งานวิจัย</string>
+    <string name="language">ภาษา</string>
+</resources>

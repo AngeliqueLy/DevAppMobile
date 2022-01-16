@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailsMovie">
@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/overview"
-        android:text=""
+        android:text="@string/overviewl"
         android:hint="overview"
         app:layout_constraintTop_toBottomOf="@+id/releasedate"
         tools:ignore="MissingConstraints"></TextView>
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/releasedate"
-        android:text=""
+        android:text="@string/releasedatel"
         android:hint="releasedate"
         app:layout_constraintTop_toBottomOf="@+id/title"
         tools:ignore="MissingConstraints"></TextView>
@@ -35,16 +35,33 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/title"
-    android:text=""
+    android:text="@string/titlel"
     android:hint="title"
     app:layout_constraintTop_toBottomOf="@+id/imagedet"
     tools:ignore="MissingConstraints"></TextView>
+
+    <TextView
+        android:id="@+id/genrelist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/genre"
+        app:layout_constraintStart_toStartOf="@+id/overview"
+        app:layout_constraintTop_toBottomOf="@+id/overview"
+        tools:ignore="MissingConstraints"></TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listgenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/overview"
+        app:layout_constraintTop_toBottomOf="@+id/genrelist"
+        tools:ignore="MissingConstraints" />
+
 
     <Button
         android:id="@+id/quitter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quitter"
+        android:text="@string/quitter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

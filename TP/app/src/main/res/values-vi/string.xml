@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> <string name="app_name">TP</string>
+    <string name="title_activity_popular_movie">phim nổi tiếng</string>
+    <string name="title_activity_details_movie">chi tiết phim</string>
+    <string name="title_activity_upcoming_movie">bộ phim sắp ra mắt</string>
+    <string name="large_text">
+
+    </string>
+
+    <string name="genre">thể loại :</string>
+    <string name="overviewl">Tổng quat : </string>
+    <string name="favorite">tôi thích</string>
+    <string name="detail">chi tiết</string>
+    <string name="releasedatel">ngày phát hành :</string>
+    <string name="titlel">chức vụ :</string>
+    <string name="quitter">rời bỏ</string>
+    <string name="ok">Được chứ</string>
+    <string name="upcoming">Tương lai</string>
+    <string name="popular">phổ biến</string>
+    <string name="favoris">yêu thích</string>
+    <string name="research">tìm kiếm</string>
+    <string name="language">ngôn ngữ</string></resources>

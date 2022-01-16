@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> <string name="app_name">TP</string>
+    <string name="title_activity_popular_movie">영화대중</string>
+    <string name="title_activity_details_movie">디테일필름</string>
+    <string name="title_activity_upcoming_movie">필름아베니어</string>
+    <string name="large_text">
+
+    </string>
+
+    <string name="genre">장르 :</string>
+    <string name="overviewl">개요 : </string>
+    <string name="favorite">가장좋아하는</string>
+    <string name="detail">세부사항</string>
+    <string name="releasedatel">출시일 :</string>
+    <string name="titlel">제목 :</string>
+    <string name="quitter">떠나다</string>
+    <string name="ok">괜찮아</string>
+    <string name="upcoming">미래</string>
+    <string name="popular">인기있는</string>
+    <string name="favoris">즐겨찾기</string>
+    <string name="research">연구</string>
+    <string name="language">언어</string></resources>

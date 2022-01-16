@@ -6,23 +6,28 @@
     <item
         android:id="@+id/upcoming"
         android:icon="@drawable/ic_baseline_new_releases_24"
-        android:title="Upcoming" />
+        android:title="@string/upcoming" />
 
     <item
         android:id="@+id/popular"
         android:icon="@drawable/ic_baseline_movie_filter_24"
-        android:title="Popular" />
+        android:title="@string/popular" />
 
     <item
         android:id="@+id/favorite"
         android:icon="@drawable/ic_baseline_favorite_24"
-        android:title="Favorite" />
+        android:title="@string/favoris" />
 
     <item
         android:id="@+id/research"
-        android:title="Research"
+        android:title="@string/research"
         app:showAsAction="ifRoom|collapseActionView"
-        app:actionViewClass="android.widget.SearchView"/>
+        app:actionViewClass="android.widget.SearchView"
+        />
+    <item
+        android:id="@+id/langue"
+        android:title="@string/language"
+       />
 
 
 </menu>

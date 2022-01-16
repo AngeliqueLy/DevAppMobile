@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TP</string>
+    <string name="title_activity_popular_movie">人気の映画</string>
+    <string name="title_activity_details_movie">映画の詳細</string>
+    <string name="title_activity_upcoming_movie">今後の映画</string>
+    <string name="large_text">
+
+    </string>
+
+    <string name="genre">ジャンル :</string>
+    <string name="overviewl">概要 : </string>
+    <string name="favorite">好き</string>
+    <string name="detail">詳細</string>
+    <string name="releasedatel">発売日 :</string>
+    <string name="titlel">タイトル :</string>
+    <string name="quitter">離れる</string>
+    <string name="ok">わかった</string>
+    <string name="upcoming">将来</string>
+    <string name="popular">人気</string>
+    <string name="favoris">お気に入り</string>
+    <string name="research">リサーチ</string>
+    <string name="language">言語</string>
+</resources>
